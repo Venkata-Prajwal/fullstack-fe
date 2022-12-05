@@ -1,13 +1,722 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* LOGIN PAGE STYLING */
+.login-page,.register-page,.email-page,.forgot-page{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.login-page .container-fluid,
+.register-page .container-fluid,
+.email-page .container-fluid,
+.forgot-page .container-fluid {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom right, lightblue, #3daee7, #7079ee);
+}
+
+.login-page .container-fluid .row{
+    width: 100%;
+    height: 80%;
+    margin: 0;
+}
+
+.login-page .left-section ,.register-page .left-section,.email-page .left-section,.forgot-page .left-section{
+    width: 55%;
+    height: 100%;
+}
+
+.login-page .right-section ,.register-page .right-section,.email-page .right-section,.forgot-page .right-section{
+    width: 45%;
+    height: 100%;
+
+}
+
+.login-page .left-section .left-sub-section,
+.register-page .left-section .left-sub-section,
+.email-page .left-section .left-sub-section,
+.forgot-page .left-section .left-sub-section {
+    width: 70%;
+    height: 100%;
+    margin: 0;
+}
+
+.login-page .left-section .left-sub-section .left-sub-top-section {
+    width: 100%;
+    height: 35%;
+    background-image: linear-gradient(to right bottom, #275ce7, #7695f0, #3769e8);
+
+}
+
+.login-page .left-section .left-sub-section .left-sub-top-section h1{
+    font-family: 'Playball', cursive;
+    color: white;
+    font-size: 2.7rem;
+    text-align: center
+}
+
+.login-page .left-section .left-sub-section .left-sub-top-section p,
+.register-page .left-section .left-sub-section .left-sub-top-section p,
+.email-page .left-section .left-sub-section .left-sub-top-section p,
+.forgot-page .left-section .left-sub-section .left-sub-top-section p {
+    font-family: 'Great Vibes', cursive;
+    color: whitesmoke;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.login-page .left-section .left-sub-section .left-sub-bottom-section{
+    width: 100%;
+    height: 65%;
+   background-color: white;
+}
+
+.fields {
+    width: 80%;
+    margin: auto;
+}
+
+.check {
+    padding-left: 10%;
+}
+
+#login-btn {
+    width: 50%;
+    margin-left: 25%;
+    background-image: linear-gradient(to bottom right, #848ff6, #3face6, #545ed6);
+}
+
+.links {
+    text-decoration: none;
+    margin-left: 33%;
+}
+
+.sign-up-link {
+    margin-left: 30%;
+}
+
+.sign-up-link .links {
+    margin-left: 2%;
+}
+.right-section h1{
+    /* font-family: 'Raleway Dots', cursive; */
+    font-family: 'Rubik Maze', cursive;
+    color:#ffffff;
+    font-size:6.5rem;
+    margin: 0;
+}
+.right-section img{
+    width:40%;
+    height:40%;
+    margin-left:25%;
+}
+.right-section p{
+    margin-top: 12%;
+  font-family: 'Great Vibes', cursive;
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 0;
+} 
+/* REGISTER PAGE STYLING */
+.register-page .container-fluid .row{
+    width: 100%;
+    height: 90%;
+    margin: 0;
+}
+.register-page .left-section .left-sub-section .left-sub-top-section {
+    width: 100%;
+    height: 30%;
+    background-image: linear-gradient(to right bottom, #275ce7, #7695f0, #3769e8);
+}
+.register-page .left-section .left-sub-section .left-sub-bottom-section  {
+    width: 100%;
+    height: 70%;
+   background-color: white;
+}
+.register-page .left-section .left-sub-section .left-sub-top-section h1{
+    font-family: 'Playball', cursive;
+    color: white;
+    font-size: 2.5rem;
+    text-align: center
+}
+/* EMAIL PAGE STYLING */
+.email-page .container-fluid .row{
+    width: 100%;
+    height: 80%;
+    margin: 0;
+}
+.email-page .left-section .left-sub-section {
+  height: 50%;
+  margin-top: 20%;
+}
+.email-page .left-section .left-sub-section .left-sub-top-section {
+    width: 100%;
+    height: 40%;
+    background-image: linear-gradient(to right bottom, #275ce7, #7695f0, #3769e8);
+}
+.email-page .left-section .left-sub-section .left-sub-bottom-section  {
+    width: 100%;
+    height: 60%;
+   background-color: white;
+}
+.email-page .left-section .left-sub-section .left-sub-top-section h1{
+    font-family: 'Playball', cursive;
+    color: white;
+    font-size: 2.5rem;
+    text-align: center
+}
+/* FORGOT PAGE STYLING */
+.forgot-page .container-fluid .row{
+    width: 100%;
+    height: 80%;
+    margin: 0;
+}
+.forgot-page .left-section .left-sub-section {
+  height: 60%;
+  margin-top: 20%;
+ }
+.forgot-page .left-section .left-sub-section .left-sub-top-section {
+    width: 100%;
+    height: 35%;
+    background-image: linear-gradient(to right bottom, #275ce7, #7695f0, #3769e8);
+}
+.forgot-page .left-section .left-sub-section .left-sub-bottom-section  {
+    width: 100%;
+    height: 65%;
+   background-color: white;
+}
+.forgot-page .left-section .left-sub-section .left-sub-top-section h1{
+    font-family: 'Playball', cursive;
+    color: white;
+    font-size: 2.5rem;
+    text-align: center
+}
+/* MAIN PAGE STYLING */
+.main-page{
+    width:100vw;
+    height:100vh;
+}
+.main-page .container-fluid{
+    width:100%;
+    height:100%;
+    background-color:#f5f6fa;
+    /* height: fit-content; */
+}
+.main-page .container-fluid .row{
+    width:100%;
+    height:100%;
+    margin: 0;
+}
+.main-page .main-left-section{
+    height:100%;
+    width:30%;
+}
+.main-left-section .main-left-profile-section{
+    height:10%;
+    background-color: #ffffff;
+    /* border:1px solid red; */
+    margin-top: 6%;
+    border-radius: 6px;
+}
+.main-left-section .main-left-profile-section .main-profile-img{
+ height:100%;
+ width:20%;
+ /* border:1px solid red; */
+}
+.main-left-section .main-left-profile-section .main-profile-img img{
+    width:100%;
+    height:100%;
+    border-radius: 50%;
+}
+.main-left-section .main-left-profile-section .main-profile-name{
+    height:100%;
+    width:60%;
+    /* border:1px solid red; */
+    font-family: 'Playball', cursive;
+    font-size: 1.5rem;
+    padding-top:2%
+}
+.main-left-section .main-left-profile-section .main-profile-logo{
+    height:100%;
+    width:20%;
+    /* border:1px solid red; */
+}
+.main-left-section .main-left-profile-section .main-profile-logo img{
+    width:60%;
+    height:60%;
+   margin-left: 40%;
+}
+.main-page .main-left-section .main-left-sub-section{
+    height:55%;
+    background-color: #ffffff;
+    margin-top: 6%;
+    border-radius: 6px;
+}
+.main-page .main-left-section .main-left-sub-section h2{
+    color:#d1e0e0;
+    padding-left: 6%;
+    padding-top: 4%;
+    padding-bottom:3%;
+}
+.main-page .main-left-section .main-left-sub-section ul{
+    list-style: none;
+    line-height:3em;
+}
+
+.main-page .main-left-section .main-left-sub-section ul li{
+    /* padding-bottom: 8%; */
+    width:90%;
+    border-radius:8px;
+    color:black;
+    font-family: 'Playball', cursive;
+    font-size: 1.6em;
+    /* letter-spacing: 2px; */
+    
+}
+.main-page .main-left-section .main-left-sub-section ul .icon-style{
+    margin-right:5%;
+    margin-left: 5%;
+   
+}
+
+.main-page .main-left-section .main-left-sub-section ul li:hover{
+    background-color: #3769e8;
+    color: #ffffff;
+}
+.main-page .main-left-section .main-left-sub-section ul .link-content{
+    align-content: center;
+}
+.main-page .main-right-section{
+    height:100%;
+    width:70%;
+    padding: 0;
+    /* border:1px solid red; */
+}
+.main-page .main-right-section .main-right-top-section{
+    width:100%;
+    height:20%;
+    border:1px solid #f5f6fa;
+}
+.main-page .main-right-section .main-right-top-section .main-right-top-sub-section{
+    width:100%;
+    height:90%;
+    background-color: #ffffff;
+    margin-top: 2%;
+    border-radius: 6px;
+}
+.main-page .main-right-section .main-right-top-section .main-right-top-sub-section .head-section{
+    height:50%;
+    width:100%;
+
+}
+.main-right-top-sub-section .head-section .profile-img{
+    width:10%;
+    height:100%;
+    margin-left: 2%;
+    margin-top: 1%;
+
+}
+.main-right-top-sub-section .head-section .profile-img img{
+    height:80%;
+    width:80%;
+    border-radius:50%;
+    
+}
+.main-right-top-sub-section .head-section .profile-content{
+    font-family: 'Playball', cursive;
+    font-size: 1.6em;
+    padding-top: 0%;
+    color:#d5d5d5;
+    /* border: 1px solid red; */
+    width: 90%;
+}
+.profile-content .input-profile-width{
+    width: 100%;
+    padding-top: -4%;
+}
+.main-page .main-right-section .main-right-top-section .main-right-top-sub-section .body-section{
+    height:50%;
+    width:100%;
+ 
+}
+.main-right-top-sub-section .body-section .body-left-content{
+    width:70%;
+    height:100%;
+    padding-top: 1%;
+}
+.main-right-top-sub-section .body-section .body-left-content .body-icon{
+font-size: 2.5rem;
+margin-left: 2%;
+}
+.main-right-top-sub-section .body-section .body-left-content .body-para{
+    margin-left: 1%;
+    font-size:1.2rem
+}
+
+.main-right-top-sub-section .body-section .body-right-content{
+    width:30%;
+    height:100%;
+
+}
+#share-btn{
+    margin-left:55%;
+    margin-top:2%;
+    width:40%
+}
+.main-page .main-right-section .main-right-bottom-section{
+    width:100%;
+    height:80%;
+    border:1px solid #f5f6fa;
+   
+}
+.main-page .main-right-section .main-right-bottom-section .main-right-body{
+    background-color: #ffffff;
+    width:100%;
+    height: 90%;
+    margin-top:3%;
+    /* border:1px solid red */
+}
+.main-page .main-right-section .main-right-bottom-section .main-right-body .other-profile{
+    width:100%;
+    height:15%;
+ 
+}
+.other-profile .other-profile-img{
+ width:10%;
+ height: 100%;
+ 
+}
+.other-profile .other-profile-img img{
+    width:70%;
+    height:70%;
+    border-radius: 50%;
+    margin-top:8%;
+    margin-left: 10%;
+}
+.other-profile .other-profile-content{
+width:90%;
+height: 100%;
+
+}
+.other-profile .other-profile-content h2{
+    font-family: 'Playball', cursive;
+    color: black;
+   margin-top: 1%;
+}
+.main-page .main-right-section .main-right-bottom-section .main-right-body .other-content{
+    width:100%;
+    height:85%;
+  
+}
+.other-content .posted-data p{
+    font-family: 'Playball', cursive;
+    margin-top: 1%;
+    font-size: 1.2rem;
+}
+.other-content .posted-image{
+ width:100%;
+ height:70%
+
+}
+.other-content .posted-image img{
+    width:100%;
+    height:100%
+}
+
+.others-top-div{
+    /* border:1px solid black; */
+    width:100%;
+    height:55%
+}
+.others-bottom-div{
+    /* border:1px solid black; */
+    width:100%;
+    height:45%;
+    background-color: #ffffff;
+    margin-top: 2%;
+    border-radius: 6px;
+}
+.others-top-image-div{
+    /* border: 1px solid brown; */
+    /* margin-top:5%; */
+    border-radius: 6px;
+    height:95%;
+    margin-top: 2%;
+    background-color: #ffffff;
+}
+.others-top-image-div .profile-img{
+    width:100%;
+    height:50%;
+    /* border: 1px solid red; */
+}
+.others-top-image-div .profile-img img{
+    width: 100%;
+    height:100%
+}
+.others-top-image-div .profile-content{
+    width:100%;
+    height:50%;
+    /* border: 1px solid red; */
+}
+.profile-content .profile-content-img{
+    /* border: 1px solid red;  */
+    width:100%;
+    height:60%;
+    margin-top: 2%;
+}
+.profile-content .profile-content-list{
+    /* border: 1px solid red;  */
+    width:100%;
+    height:40%
+}
+.profile-content-img .profile-content-image{
+    /* border: 1px solid black; */
+    height:100%;
+    width:10%
+}
+.profile-content-img .profile-content-image img{
+    width: 100%;
+    height:100%;
+    border-radius: 50%;
+}
+.profile-content-img .profile-content-name{
+    /* border: 1px solid black; */
+    height:100%;
+    width:90%
+}
+.profile-content-img .profile-content-name h2 ,.profile-content-img .profile-content-name p{
+    font-family: 'Playball', cursive;
+    padding-left:2%;
+    margin-bottom: 0;
+}
+.profile-content .profile-content-details{
+    /* border: 1px solid red;  */
+    width:100%;
+    height:50%
+}
+.profile-content-list ul{
+    list-style: none;
+    margin-top: 1%;
+    /* display: inline; */
+}
+.profile-content-list li{
+    padding-right: 4%;
+    display: inline;
+    padding-left: 1%;
+
+}
+.profile-content-list li:hover{
+    color: #275ce7;
+}
+.others-bottom-div .about{
+    /* border: 1px solid red; */
+    height: 100%;
+    width:100%
+}
+.others-bottom-div .about h2,.others-bottom-div .friends h2,.others-bottom-div .posts .h2{
+    font-family: 'Playball', cursive;
+
+}
+.others-bottom-div .friends{
+    /* border: 1px solid red; */
+    height: 100%;
+    width:100%
+}
+.friends-sub-div{
+    width:50%;
+    height:20%;
+    border:1px solid red
+}
+.friends-sub-div .friend-img{
+    width:20%;
+    height:100%;
+    /* border:1px solid red */
+
+}
+.friends-sub-div .friend-img img{
+    width:80%;
+    height: 100%;
+    border-radius: 50%;
+}
+.friends-sub-div .friend-name{
+    /* border:1px solid red; */
+    width:80%;
+    height:100%
+}
+.friends-sub-div .friend-name p{
+    font-family: 'Playball', cursive;
+    font-size:1.4rem;
+    margin-left: -2%;
+    margin-top: 1%;
+}
+.posts-img{
+    width:60%;
+    margin: auto;
+    height:60%;
+    /* border:1px solid blue; */
+    margin-bottom: 1%;
+}
+.posts-img img{
+    width: 100%;
+    height:100%;
+    
+}
+.main-right-section .main-right-friends-list{
+    background-color: #ffffff;
+    width: 100%;
+    height:95%;
+    margin-top:2%;
+    border-radius: 6px;
+}
+.add-friend{
+    height:10%;
+    width:50%;
+    /* border:1px solid red; */
+    margin-left: 50%;
+}
+.input-field{
+    width:60%;
+    /* border:1px solid green */
+}
+.dropdown-name{
+    width:100%;
+    margin-top: 2%;
+}
+.add-button{
+    width:40%;
+    margin-top: 1%;
+}
+.get-friends-list{
+    height:90%;
+    width:100%;
+    /* border:1px solid red  */
+}
+.friends-sub-divs{
+    width:80%;
+    /* height:;s */
+    /* border:1px solid red */
+}
+.friends-sub-divs .friend-img{
+    width:15%;
+    height:80%;
+    margin-left: 2%;
+    /* border:1px solid red */
+
+}
+.friends-sub-divs .friend-img img{
+    width:80%;
+    height: 100%;
+    border-radius: 50%;
+}
+.friends-sub-divs .friend-name{
+    /* border:1px solid red; */
+    width:80%;
+    height:100%
+}
+.friends-sub-divs .friend-name p{
+    font-family: 'Playball', cursive;
+    font-size:1.4rem;
+    margin-left: -2%;
+    margin-top: 1%;
+    margin-right: 30%;
+}
+.unfriend-btn{
+    height:70%;
+    margin-right: 5%;
+    margin-top: 1%;
+}
+.friends-header{
+    font-family: 'Playball', cursive;
+    margin-left: 2%;
+}
+.saved-posts{
+    width:100%;
+    height:95%;
+    margin-top:2%;
+    border-radius: 6px;
+    background-color: #ffffff;
+}
+.saved-posts-img{
+    width:60%;
+    height:27%;
+    /* border: 1px solid red; */
+    margin-left: 2%;
+    margin-bottom: 1%;
+
+}
+.saved-posts-img .posted-image{
+    width:100%;
+    height:84%;
+    margin-top:-3%;
+}
+.posted-image img{
+    width:100%;
+    height:100%
+}
+.save-post-icon{
+    margin-left:54%;
+    color:grey;
+    /* font-size:4rem; */
+}
+.para{
+    margin-left: 1%;
+}
+.main-right-profile{
+    height: 94%;
+    width:100%;
+    background-color: #ffffff;
+    margin-top: 2%;
+    border-radius: 6px;
+}
+
+.main-right-profile .profile-pic{
+ width: 100%;
+ height:10%;
+ /* border: 1px solid red; */
+}
+.main-right-profile .profile-pic img{
+    width: 12%;
+    height:98%;
+    border-radius: 50%;
+    margin-left:43%;
+    margin-top: 3px;
+}
+.main-right-profile .profile-form{
+   
+    width: 100%;
+    height:90%;
+    /* border: 1px solid red; */
+    /* background-color: #ffffff; */
+}
+.main-right-profile .profile-form .container-fluid{
+    width: 100%;
+    height:100%;
+}
+.main-right-profile .profile-form .container-fluid .row{
+    width: 100%;
+    height:100%;
+    /* border: 1px solid green; */
+}
+.profile-field{
+ width:40%;
+ margin-top: 1%;
+}
+.profile-about{
+    width:90%
+}
+#save-btn{
+    height:8%;
+    width:10%;
+    margin-top: 2%;
+    margin: auto;
+    background-color: #3769e8;
+    border-radius: 6px;
+}
+.profile-fields{
+    width: 100%;
+    margin-left: 5%;
+}
+#emoji-collection{
+    color:#f4a007;
+    font-size:2.2rem;
+    margin-right:2%;
 }

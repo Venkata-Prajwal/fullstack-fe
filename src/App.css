@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+/* LOGIN STYLING */
+/* body {
+  margin: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login-page .container-fluid {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to bottom right,lightblue,#3daee7,#7079ee); 
+  background-image: linear-gradient(to bottom right,#848ff6,#3face6,#545ed6);
+  border:1px solid black;
+  margin: 0px;
+  padding: 0px;
+  min-width: 375px;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.login-page .container-fluid .row {
+  height: 70%;
+  min-width: 375px;
+  margin-left: 0px;
+  border:1px solid black
+}
+.website-logo{
+  border:1px solid red;
+  height:20%
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.login-page .top-section {
+  height: 33%;
+  background-image: linear-gradient(to right bottom, #275ce7, #7695f0, #3769e8);
+}
+
+.top-section h1 {
+  font-family: 'Playball', cursive;
   color: white;
+  font-size: 2.3rem;
+  margin-bottom: 0px;
+  text-align: center;
+  margin-top: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.top-section p {
+  font-family: 'Great Vibes', cursive;
+  color: aliceblue;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login-page .bottom-section {
+  height: 70%;
+  background-color: #ffffff;
 }
+
+.links {
+  text-decoration: none;
+  margin-left: 33%;
+}
+
+.sign-up-link {
+  margin-left: 30%;
+}
+
+.sign-up-link .links {
+  margin-left: 2%;
+}
+
+.fields {
+  width: 80%;
+  margin: auto;
+}
+
+.check {
+  padding-left: 10%;
+}
+
+#login-btn {
+  width: 50%;
+  margin-left: 25%;
+  background-image: linear-gradient(to bottom right, #848ff6, #3face6, #545ed6);
+} */
