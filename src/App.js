@@ -10,7 +10,7 @@ import LoginNew from './components/LoginNew';
 import Main from './components/Main'
 
 export const CommonContext = React.createContext();
-const apiurl = 'http://localhost:8000'
+const apiurl = 'https://fullstack-be.onrender.com'
 
 function App() {
   return <>
