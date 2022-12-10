@@ -8,10 +8,14 @@ import ForgotPassword from './components/ForgotPassword'
 import Profile from './components/Profile'
 import LoginNew from './components/LoginNew';
 import Main from './components/Main'
+
+export const CommonContext = React.createContext();
+const apiurl = 'http://localhost:8000'
+
 function App() {
   return <>
    <BrowserRouter>
-    
+   <CommonContext.Provider value={{ apiurl }}>
        <Routes>
           <Route path='/signin' element={<LoginNew/>}/>
           <Route path='/signup' element={<Register/>}/>
@@ -21,7 +25,7 @@ function App() {
           <Route path='/main' element={<Main/>}/>
           <Route path='*' element={<Navigate to="/signin" />}/>
        </Routes>
-   
+   </CommonContext.Provider>
     </BrowserRouter>
   </>
 }

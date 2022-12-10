@@ -1,8 +1,28 @@
-import React from 'react'
+import React, { useState, useContext } from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { CommonContext } from '../App';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom'
 
 function ForgotPassword() {
+    let commonContext = useContext(CommonContext);
+    let navigate = useNavigate()
+
+    let [password,setPassword]=useState("");
+    let [userConfirmPassword,setUserConfirmPassword]=useState("")
+
+    async function handleForgotPass(){
+        let email=localStorage.getItem('email')
+        let res = await axios.put(`${commonContext.apiurl}/forgot-pass/${email}`, {
+           password,
+           userConfirmPassword
+         })
+         if(res.data.statusCode===200){
+            navigate('/login');
+            localStorage.clear()
+         }
+    }
     return <>
         <section className='forgot-page'>
             <div className='container-fluid d-flex align-items-center'>
@@ -16,13 +36,13 @@ function ForgotPassword() {
                             <div className='left-sub-bottom-section'>
                                 <Form>
                                     <Form.Group className="mb-3 pt-3 fields" controlId="formBasicPassword">
-                                        <Form.Control type="password" placeholder="Password" />
+                                        <Form.Control type="password" placeholder="Password" onChange={(e)=>{setPassword(e.target.value)}}/>
                                     </Form.Group>
 
                                     <Form.Group className="mb-3 fields" controlId="formBasicConfirmPassword">
-                                        <Form.Control type="password" placeholder=" Confirm Password" />
+                                        <Form.Control type="password" placeholder=" Confirm Password" onChange={(e)=>{setUserConfirmPassword(e.target.value)}}/>
                                     </Form.Group>
-                                    <Button variant="primary" id='login-btn'>SUBMIT</Button>
+                                    <Button variant="primary" id='login-btn' onClick={()=>{handleForgotPass()}}>SUBMIT</Button>
                                 </Form>
                             </div>
                         </div>

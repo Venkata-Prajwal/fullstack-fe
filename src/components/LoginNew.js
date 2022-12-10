@@ -1,10 +1,29 @@
-import React from 'react'
+import React, { useState, useContext }  from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+import { CommonContext } from '../App';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom'
 
 function LoginNew() {
+    let commonContext = useContext(CommonContext);
+    let navigate = useNavigate()
+
+    let [email,setEmail]=useState("");
+    let [password,setPassword]=useState("")
+
+    async function handleLogin(){
+        let res = await axios.post(`${commonContext.apiurl}/login`, {
+            email,
+            password
+         })
+         if(res.data.statusCode===200){
+            navigate('/main')
+            localStorage.setItem('email',email)
+         }
+    }
     return <>
        <section className='login-page'>
            <div className='container-fluid d-flex align-items-center'>
@@ -18,24 +37,24 @@ function LoginNew() {
                        <div className='left-sub-bottom-section'>
                        <Form>
                                     <Form.Group className="mb-3 pt-3 fields" controlId="formBasicEmail">
-                                        <Form.Control type="email" placeholder="Enter email" />
+                                        <Form.Control type="email" placeholder="Enter email" onChange={(e)=>{setEmail(e.target.value)}}/>
                                     </Form.Group>
 
                                     <Form.Group className="mb-3 fields" controlId="formBasicPassword">
-                                        <Form.Control type="password" placeholder="Password" />
+                                        <Form.Control type="password" placeholder="Password" onChange={(e)=>{setPassword(e.target.value)}}/>
                                     </Form.Group>
                                     <Form.Group className="mb-3 check" controlId="formBasicCheckbox">
                                         <Form.Check type="checkbox" label="Remember me" />
                                     </Form.Group>
 
-                                    <Button variant="primary" id='login-btn'>LOGIN</Button>
+                                    <Button variant="primary" id='login-btn' onClick={()=>{handleLogin()}}>LOGIN</Button>
 
                                     <Form.Group className='mt-1'>
-                                        <Link to='/' className='links'>Forgot Password?</Link>
+                                        <Link to='/email' className='links'>Forgot Password?</Link>
                                     </Form.Group>
                                     <Form.Group className='mt-4 sign-up-link'>
                                         New user?
-                                        <Link to='/' className='links'>Sign Up</Link><ArrowRightAltIcon />
+                                        <Link to='/signup' className='links'>Sign Up</Link><ArrowRightAltIcon />
                                     </Form.Group>
 
                                 </Form>

@@ -38,6 +38,7 @@
     width: 70%;
     height: 100%;
     margin: 0;
+
 }
 
 .login-page .left-section .left-sub-section .left-sub-top-section {
@@ -246,7 +247,7 @@
    margin-left: 40%;
 }
 .main-page .main-left-section .main-left-sub-section{
-    height:55%;
+    height:60%;
     background-color: #ffffff;
     margin-top: 6%;
     border-radius: 6px;
@@ -524,7 +525,7 @@ height: 100%;
 .friends-sub-div{
     width:50%;
     height:20%;
-    border:1px solid red
+    /* border:1px solid red */
 }
 .friends-sub-div .friend-img{
     width:20%;

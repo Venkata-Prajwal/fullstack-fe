@@ -1,8 +1,20 @@
-import React from 'react'
+import React, { useState, useContext } from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { CommonContext } from '../App';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom'
 
 function Email() {
+    let commonContext = useContext(CommonContext);
+    let navigate = useNavigate()
+
+    let [email,setEmail]=useState("")
+
+    async function handleEmail(){
+        await localStorage.setItem('email',email);
+        navigate('/forgotpass')
+    }
     return <>
         <section className='email-page'>
             <div className='container-fluid d-flex align-items-center'>
@@ -16,9 +28,9 @@ function Email() {
                             <div className='left-sub-bottom-section'>
                                 <Form>
                                     <Form.Group className="mb-3 pt-3 fields" controlId="formBasicEmail">
-                                        <Form.Control type="email" placeholder="Enter email" />
+                                        <Form.Control type="email" placeholder="Enter email" onChange={(e)=>{setEmail(e.target.value)}}/>
                                     </Form.Group>
-                                    <Button variant="primary" id='login-btn'>SUBMIT</Button>
+                                    <Button variant="primary" id='login-btn' onClick={()=>{handleEmail()}}>SUBMIT</Button>
                                 </Form>
                             </div>
                         </div>
